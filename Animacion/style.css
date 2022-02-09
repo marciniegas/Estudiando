@@ -1,0 +1,357 @@
+body {
+    margin: 0;
+}
+
+
+a:link {
+    color: hotpink;
+}
+
+a:visited {
+    color: tomato;
+}
+
+a:hover {
+    background-color: palegoldenrod;
+}
+
+p:not(.maravillas) {
+    color: lightsalmon;
+}
+
+.container div:nth-child(1) {
+    color: lightgreen;
+}
+
+.pseudo-elements div::before {
+    content: ":)";
+}
+
+.pseudo-elements div::after {
+    content: ":(";
+}
+
+.shadow {
+    background: lightgray;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.circulo {
+    background: #20002c; 
+    background: -webkit-linear-gradient(to right, #cbb4d4, #20002c); 
+    background: linear-gradient(to right, #cbb4d4, #20002c);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.circulo:hover {
+    transform: translate(20px);
+}
+
+.scuare {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #3ca827;
+    background-image: linear-gradient(180deg, #3ca827 0%, #6284FF 33%, #FF0000 66%, #1e9c24 100%);
+}
+
+.scuare:hover {
+    transform: scale(0.1, 0.2);
+    transition: transform 2s;
+}
+
+.idon {
+    width: 50px;
+    height: 50px;
+    background-color: cadetblue;
+    border-radius: 20%;
+}
+
+.idon:hover {
+    transform: skewY(20deg);
+}
+
+.triangulo {
+    height: 50px;
+    width: 30px;
+    background-color: #FF0000;
+    transform-origin: left top;
+}
+
+.triangulo:hover {
+    transform: rotate(45deg);
+    transition: transform 2s;
+}
+
+.container-dad {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 5px solid blueviolet;
+    perspective: 100px;
+}
+
+.item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: plum;
+    border: 3px solid hotpink;
+    opacity: 0.5;
+    transform-style: preserve-3d;
+    transform: rotateX(30deg);
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.face.front {
+    background: palevioletred;
+
+}
+
+.face.back {
+    background: goldenrod;
+    transform: rotateX(180deg);
+}
+
+.parallax-container {
+    width: 100%;
+    height: 100vh;
+    perspective: 8px;
+    perspective-origin: 50%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: 0 50%;
+}
+
+.image__backgroudn {
+    height: auto;
+    width: 100%;
+    transform: translateZ(0px) scale(1);
+    transform-origin: 0 50%;
+}
+
+.image__middle {
+    height: 100%;
+    width: 100%;
+    transform: translateZ(5px) scale(0.375);
+    transform-origin: 50%;
+}
+
+.image__foreground {
+    transform: translateZ(2px) scale(0.75);
+    transform-origin: top;
+}
+
+.card {
+    background: white;
+    width: 80px;
+    height: 100px;
+    position: absolute;
+    border-radius: 8px;
+    transform: rotateX(-20px);
+}
+
+.one {
+    left: 30%;
+    top: 300px;
+}
+
+.two {
+    left: 90%;
+    top: 800px;
+}
+
+.three {
+    right: 20%;
+    bottom: -700px;
+}
+
+.container-transition-property {
+    width: 400px;
+    height: 100px;
+    background: pink;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.container-transition-property .box {
+    width: 100px;
+    height: 100px;
+}
+
+.container-transition-property:hover .box {
+    transform: scale(1.2);
+}
+
+.container-transition-property .box1 {
+    background: goldenrod;
+    transition: transform 500ms;
+}
+
+.container-transition-property .box2 {
+    background: greenyellow;
+    
+    transition: transform 1s;
+}
+
+.container-transition-property .box3 {
+    background: blue;
+    
+    transition: transform 1.5s;
+}
+
+.container-delay:hover .cicled{
+    transform: translateX(200px);
+}
+
+.cicled {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cicled.one {
+    background: fuchsia;
+    transition: transform 1s linear;
+    transition-delay: 1.5s;
+}
+
+.cicled.two {
+    background: orchid;
+    transition: transform 1s ease;
+    transition-delay: 1.5s;
+}
+
+.cicled.three {
+    background: violet;
+    transition: transform 1s ease-in;
+    transition-delay: 1.5s;
+}
+
+.cicled.four {
+    background: plum;
+    transition: transform 1s ease-out;
+    transition-delay: 1.5s;
+}
+
+.cicled.five {
+    background: thistle;
+    transition: transform 1s ease-in-out;
+    transition-delay: 1.5s;
+}
+
+.cicled.six {
+    background: lavender;
+    transition: transform 1s cubic-bezier(51,.72,.91,.26);
+    transition-delay: 1.5s;
+}
+
+/* Movimiento impulsado por la accion*/
+
+.movimiento-impulsado {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: plum;
+    transition: transform 1s linear;
+}
+
+.movimiento-impulsado:hover {
+    transition: transform 0.5s linear;
+    transform: translateX(200px);
+}
+
+/* Tiempos de espera */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.menu-nav li ul {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 2s linear;
+    transition-delay: 300ms;
+}
+
+.menu-nav li:hover > ul {
+    opacity: 1;
+    transition: opacity 0.1s linear;
+}
+
+
+.menu-nav li ul li{
+    position: relative;
+}
+
+.menu-nav li ul li{
+    right: -50px;
+}
+
+.container-button {
+    padding: 20px
+}
+
+button {
+    width: 150px;
+    height: 75px;
+    background: plum;
+}
+
+.left {
+    will-change: transform;
+    transition: transform 1.5s linear;
+}
+
+.left:hover {
+    transform: translate(30px, -30px);
+    transition: transform 1s linear;
+}
+
+.right {
+    will-change: margin-top;
+    transition: margin-top 1s;
+}
+
+.right:hover {
+    margin-top: 30px;
+}

@@ -1,0 +1,36 @@
+
+.abuelo {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    background-color: blueviolet;
+    justify-items: end;
+}
+
+.padre {
+    width: 50%;
+    height: 50%;
+    display: grid;
+    background-color: brown;
+}
+
+.hijo {
+    width: 50%;
+    height: 50%;
+    display: grid;
+    background-color: rosybrown;
+}
+
+.padre-d {
+    width: 50%;
+    height: 50%;
+    display: grid;
+    background-color: seagreen;
+}
+
+.hijo-d {
+    width: 50%;
+    height: 50%;
+    display: grid;
+    background-color: yellow;
+}
